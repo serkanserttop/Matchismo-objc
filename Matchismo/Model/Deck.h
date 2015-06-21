@@ -6,8 +6,14 @@
 //  Copyright (c) 2015 Serkan Serttop. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import "Card.h"
 
-@interface Deck : Card
+@interface Deck : NSObject
+
+- (void)addCard:(Card *)card atTop:(BOOL)atTop;
+- (void)addCard:(Card *)card;
+
+- (Card *)drawRandomCard;
 
 @end
