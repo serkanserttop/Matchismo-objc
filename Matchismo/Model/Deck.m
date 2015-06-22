@@ -33,7 +33,7 @@
 }
 
 - (void)addCard:(Card *)card{
-    
+    [self addCard:card atTop:NO];
 }
 
 - (Card *)drawRandomCard
@@ -43,7 +43,6 @@
         unsigned index = arc4random() % [self.cards count];
         randomCard = self.cards[index];
         [self.cards removeObjectAtIndex:index];
-        //??
     }
     
     return randomCard;
